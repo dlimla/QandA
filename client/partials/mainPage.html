@@ -1,0 +1,24 @@
+<div ng-controller='mainController'>
+	<h3>Hi {{currentUser.Name}}</h3>
+	<button ng-click='sessionOff()'>Log Off</button><br>
+
+	<p></p>
+
+
+	<a href="#/addQuestion">Add a Question</a>
+	<p></p>
+	<input type="text" placeholder="Question" ng-model="filter_name">
+	<table>
+		<tr>
+			<td>Question</td>
+			<td>Answers</td>
+			<td>Action</td>
+		</tr>
+		<tr ng-repeat = "question in allQuestions | orderBy: '-createdAt' | filter:filter_name">
+			<td>{{ question.title }}</td>
+			<td>{{ question.answers.length}}</td>
+			<td><a href="#/question/{{ question._id }}">Show</a> | <a href="#/answerQuestion/{{ question._id }}">Answer</a></td>
+		</tr>
+	</table>
+	
+</div>

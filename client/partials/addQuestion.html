@@ -1,0 +1,25 @@
+<div ng-controller="mainController">
+	
+	<a href="#/main">Home</a>
+	<p></p>
+	<h1>New Question</h1>
+
+	<p></p>
+
+	<p ng-repeat = 'error in questionErrors'>{{error.message}}></p>
+
+	<form ng-submit="newQuestion(question)">
+
+		<label>Question</label><br>
+		<textarea rows="6" cols="30" ng-model="question.title"></textarea><br>
+
+		<p></p>
+
+		<label>Description(optional)</label><br>
+		<textarea rows="6" cols="30" ng-model="question.description"></textarea><br>
+
+		<input type="submit" value="Submit">
+		<a href="#/main">Cancel</a>
+	</form>
+
+</div>

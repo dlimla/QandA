@@ -1,0 +1,21 @@
+{
+  "name": "login_reg",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "dlim09 <danielhlim1990@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}

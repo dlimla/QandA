@@ -1,0 +1,18 @@
+<div ng-controller="answerQuestionCtrl">
+	<a href="#/main">Home</a> | 
+	<a href="#/answerQuestion/{{ getQuestion._id }}">Answer the Question</a>
+	<p></p>
+	<h3>{{ getQuestion.title }}</h3>
+	<p>Description: {{ getQuestion.description }}</p>
+
+	<p>----------------------------------</p>
+
+	<div ng-repeat="x in getQuestion.answers | orderBy:'-likes'">
+		<p>Answer: {{ x.answer }}</p>
+		<p>Sources: {{ x.supporting }}</p>
+		<p>By: {{ x._user.Name }}</p>
+		<p><button ng-click="likeAnAnswer(x._id)">Like</button> || Likes {{ x.likes.length }}</p>
+		<p>-------------------------</p>
+	</div>
+
+</div>

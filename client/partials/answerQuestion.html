@@ -1,0 +1,22 @@
+<div ng-controller="answerQuestionCtrl">
+	<a href="#/main">Home</a> | 
+	<a href="#/question/{{ getQuestion._id }}">Go Back to Question</a>
+	<p></p>
+	<h3>{{ getQuestion.title }}</h3>
+	<p>{{ getQuestion.description }}</p>
+	<p></p>
+
+	<form ng-submit="newAnswer(postAnswer)">
+
+		<label>Your Answer</label><br>
+		<textarea rows="6" cols="30" ng-model="postAnswer.answer"></textarea><br>
+
+		<p></p>
+
+		<label>Supporting details(optional)</label><br>
+		<textarea rows="6" cols="30" ng-model="postAnswer.supporting"></textarea><br>
+
+		<input type="submit" value="Submit">
+	</form>
+	
+</div>
